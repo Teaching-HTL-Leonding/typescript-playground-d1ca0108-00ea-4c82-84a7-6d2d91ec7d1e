@@ -74,46 +74,46 @@ function mouseClicked() {
     if (mouseX < width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 0) {
         textSize(45)
         fill("green")
-        text(`${ergebnis} ist richtig`, 15, height - 100)
+        text(`${ergebnis} ist richtig`, 50, height - 60)
     }
     else if (mouseX > width / 3 && mouseX < 2 * width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 0) {
         fill("red")
         textSize(45)
-        text(`${wrongAnswer1} ist nicht richtig`, 15, height - 100)
+        text(`${wrongAnswer1} ist falsch`, 50, height - 60)
     } else if (mouseX > 2 * width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 0) {
         fill("red")
         textSize(45)
-        text(`${wrongAnswer2} ist nicht richtig`, 15, height - 100)
+        text(`${wrongAnswer2} ist falsch`, 50, height - 60)
     }
 
     if (mouseX < width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 1) {
         textSize(45)
         fill("red")
-        text(`${wrongAnswer1} ist nicht richtig`, 15, height - 100)
+        text(`${wrongAnswer1} ist falsch`, 50, height - 60)
     }
     else if (mouseX > width / 3 && mouseX < 2 * width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 1) {
         fill("green")
         textSize(45)
-        text(`${ergebnis} ist richtig`, 15, height - 100)
+        text(`${ergebnis} ist richtig`, 50, height - 60)
     } else if (mouseX > 2 * width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 1) {
         fill("red")
         textSize(45)
-        text(`${wrongAnswer2} ist nicht richtig`, 15, height - 100)
+        text(`${wrongAnswer2} ist falsch`, 50, height - 60)
     }
 
     if (mouseX < width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 2) {
         textSize(45)
         fill("red")
-        text(`${wrongAnswer2} ist nicht richtig`, 15, height - 100)
+        text(`${wrongAnswer2} ist falsch`, 50, height - 60)
     }
     else if (mouseX > width / 3 && mouseX < 2 * width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 2) {
         fill("red")
         textSize(45)
-        text(`${wrongAnswer1} ist nicht richtig`, 15, height - 100)
+        text(`${wrongAnswer1} ist falsch`, 50, height - 60)
     } else if (mouseX > 2 * width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 2) {
-        fill("greeen")
+        fill("green")
         textSize(45)
-        text(`${ergebnis} ist richtig`, 15, height - 100)
+        text(`${ergebnis} ist richtig`, 50, height - 60)
     }
 }
 
