@@ -1,27 +1,20 @@
 function setup() {
-    createCanvas(300, 300);
-    background("gold");
+    createCanvas(250, 250);
+    background("black");
+
+    strokeWeight(.1);
+    stroke("yellow");
+    colorMode(HSB)
+
+    let y = 225;
+    while (y >= 25) {
+        stroke(y, 100, 100);
+        line(25, y, y, 225)
+        line(y, 25, 225, y)
+
+        y -= 0.5;
+    }
 }
 
-function mouseClicked() {
-    fill("white");
-    circle(mouseX, mouseY, 15);
-
-    fill("gold");
-    noStroke();
-    rect(0, height - 20, width / 2, height);
-
-    fill("black");
-    text(`X: ${mouseX}, Y: ${mouseY}`, 5, height - 5);
-}
-
-function mouseMoved() {
-    noStroke();
-    fill("gold");
-    rect(width / 2, height - 20,
-        width / 2, 20);
-
-    fill("black");
-    text(`X: ${mouseX}, Y:${mouseY}`, 200, height - 5);
-
+function draw() {
 }
