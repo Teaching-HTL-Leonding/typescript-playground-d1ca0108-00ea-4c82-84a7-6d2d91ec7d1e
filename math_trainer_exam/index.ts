@@ -16,15 +16,19 @@ let wrongAnswer2 = 0
 
 // setup function runs once and sets up the quiz elements on the canvas
 function setup() {
+    // RS: You tried responsive design 👍. However, it does not really work.
+    //     Try e.g. a canvas with 400/600 -> results are not displayed correctly.
+    //     Nevertheless, you get 2 of 4 points for responsive design.
     createCanvas(400, 400);
     background("black");
-    randomOperand = Math.floor(random(1, 101))
+    randomOperand = Math.floor(random(1, 101)) // RS: First minimum requirement solved
     randomOperand2 = Math.floor(random(1, 101))
 
     wrongAnswer1 = Math.floor(random(-100, 500))
     wrongAnswer2 = Math.floor(random(100, 700))
 
     randomOperator = Math.floor(random(0, 3))
+    // RS: Second minimum requiremed solved with if statements
     if (randomOperator === 0) {
         operator = '+'
         ergebnis = randomOperand + randomOperand2
@@ -44,7 +48,7 @@ function setup() {
     text(operator, width / 2.15, 100)
 
 
-
+    // RS: This could be greatly simplified (see sample solution)
     randomPosition = Math.floor(random(0, 3))
     if (randomPosition === 0) {
         text(ergebnis, 30, height / 1.8)
@@ -71,6 +75,9 @@ function mouseClicked() {
     fill("black")
     rect(0, 245, width, height / 2.1)
 
+    // RS: Third minimum requirement solved
+
+    // RS: This could be greatly simplified (see sample solution)
     if (mouseX < width / 3 && mouseY > 150 && mouseY < 250 && randomPosition === 0) {
         textSize(45)
         fill("green")
