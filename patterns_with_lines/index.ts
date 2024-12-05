@@ -1,4 +1,4 @@
-let grid = 10;
+
 
 function setup() {
     createCanvas(601, 301);
@@ -12,11 +12,13 @@ function setup() {
     text("Move the mouse to start", 0, 0, width, height);
 }
 
+let grid = 10;
+
+
 function mouseMoved() {
     resetMatrix();
     background("black");
     strokeWeight(2);
-
     noFill();
     stroke("aqua");
     let patternSize = 10;
@@ -30,6 +32,7 @@ function mouseMoved() {
             pop()
         }
     }
+
 
     fill("black")
     noStroke();
