@@ -1,10 +1,6 @@
-let grid = 10;
-let raycolor = 0;
-
 function setup() {
     createCanvas(601, 301);
     background("black");
-    colorMode(HSB)
 
     fill("aqua");
     noStroke();
@@ -14,7 +10,6 @@ function setup() {
     text("Move the mouse to start", 0, 0, width, height);
 }
 
-
 function mouseMoved() {
     resetMatrix();
     background("black");
@@ -22,24 +17,6 @@ function mouseMoved() {
 
     noFill();
     stroke("aqua");
-    let patternSize = 10;
+
     // <<< Add your code here
-    for (let y = 0; y < height; y += patternSize) {
-        for (let x = 0; x < width; x += patternSize) {
-            push();
-            translate(x, y);
-            line(0, 0, patternSize , patternSize / 2 );
-            line(patternSize , patternSize / 2, 0, patternSize);
-            pop()
-        }
-    }
-
-
-    fill("black")
-    noStroke();
-    rect(0, height - 30, width, 30)
-    textSize(15)
-    fill("white")
-    text(`${mouseX} of 601 = ${Math.floor(mouseX / 3)}%`, 70, height - 15);
 }
-
